@@ -30,7 +30,7 @@ galaxy_info:
   platforms:
    - name: Debian
      versions:
-     - 8
+     - 10
   #   - 25
   # - name: SomePlatform
   #   versions:
