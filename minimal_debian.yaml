@@ -1,0 +1,9 @@
+---
+# playbook for the minimal_debian role.
+- hosts: all
+  vars_files:
+    - become-secret
+  become: true
+  roles:
+    - minimal_debian
+
