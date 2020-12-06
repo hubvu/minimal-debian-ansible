@@ -4,6 +4,11 @@
 # ===
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
 # ===
+- name: ensure that the apt module dependencies are installed first
+  apt:
+    name:
+      - python3-apt 
+    state: present
 
 - name: ensure that un-needed packages are removed from the debian host
   apt:
