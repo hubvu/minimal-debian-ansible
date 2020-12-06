@@ -1,2 +1,44 @@
 ---
 # tasks file for minimal_debian
+
+# ===
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+# ===
+
+- name: ensure that un-needed packages are removed from the debian host
+  apt:
+    name:
+      - openssh-client
+      - nano
+      - apache2
+      - squid
+      - squid3
+      - telnet
+      - telnetd
+      - ncat
+      - netcat
+      - netcat-openbsd
+      - netcat-traditional
+      - finger
+      - fingerd
+      - nmap
+      - xinetd
+      - samba
+      - mutter
+      - sendmail
+      - exim4
+      - cups
+      - nfs-kernel-server
+      - nfs-common
+      - nfs4-acl-tools
+      - rpcbind
+      - vsftpd
+      - proftpd
+      - pure-ftpd
+      - rwhod
+      - lpr
+    state: absent
+
+- name: autoremove unneeded packages installed as dependencies
+  apt:
+    autoremove: yes
