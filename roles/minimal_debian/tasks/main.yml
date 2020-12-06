@@ -4,6 +4,7 @@
 # ===
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
 # ===
+
 - name: ensure that the apt module dependencies are installed first
   apt:
     name:
