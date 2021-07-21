@@ -11,7 +11,7 @@
       - python3-apt
     state: present
 
-- name: ensure that un-needed packages are removed from the debian host
+- name: ensure that non-essential packages are removed from the debian host
   apt:
     name:
       - nano
@@ -48,6 +48,6 @@
       - tftp
     state: absent
 
-- name: autoremove unneeded packages installed as dependencies
+- name: autoremove non-essential packages installed as dependencies
   apt:
     autoremove: yes
